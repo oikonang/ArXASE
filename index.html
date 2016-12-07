@@ -210,12 +210,114 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="http://nbviewer.jupyter.org/github/oikonang/arxase/blob/master/ArXiv%20Analysis.ipynb" class="btn btn-lg btn-outline-dark"><i class="fa fa-github-alt"></i> View Python Notebook on NBViewer</a>
-                    <a href="https://www.youtube.com/watch?v=1MLhExvAwQw" class="btn btn-lg btn-outline-dark"><i class="fa fa-youtube"></i> View The Video That Inspired This Project</a>
-                </div>
+              <div class="col-lg-8 col-lg-offset-2 text-center">
+                  <h3>The Data</h3>
+                  <p>
+                      The data collected from ArXiv.org's API (Application Programming Interface) is loaded from it's originally XML-files into the programming language python.<br />
+                      To make the vast amount of data (37000 papers) easier to handle, we use the statistical python package <i>Pandas</i>. We do however not need all the provided meta-data. A sample of five papers are show below.
+                  </p>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                          <th>identifier</th><th>title</th><th>abstract</th><th>date</th><th>topic</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>oai:arXiv.org:1505.04344</td><td>On the maximum quartet distance between phylog...</td><td>A conjecture of Bandelt and Dress states tha...</td><td>2016-02-04</td><td>cs</td>
+                        </tr>
+                        <tr>
+                            <td>oai:arXiv.org:1505.04346</td><td>Limits to the precision of gradient sensing wi...</td><td>Gradient sensing requires at least two measu...</td><td>2016-04-27</td><td>physics:physics</td>
+                        </tr>
+                        <tr>
+                            <td>oai:arXiv.org:1505.04350</td><td>Differentiation and integration operators on w...</td><td>We show that some previous results concernin...</td><td>2016-04-04</td><td>math</td>
+                        </tr>
+                        <tr>
+                            <td>oai:arXiv.org:1505.04352</td><td>A Coding Theorem for Bipartite Unitaries in Di...</td><td>We analyze implementations of bipartite unit...</td><td>2016-06-09</td><td>physics:quant-ph</td>
+                        </tr>
+                        <tr>
+                            <td>oai:arXiv.org:1505.04355</td><td>Resonant Trapping in the Galactic Disc and Hal...</td><td>With the use of a detailed Milky Way nonaxis...</td><td>2016-10-31</td><td>physics:astro-ph</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br />
+                <h3>Post NLP</h3>
             </div>
         </div>
+      <div class="row">
+          <div class="col-lg-4 col-lg-offset-2 text-center">
+              <p>After finishing the steps explained in the <a href="#nlp">NLP-chapter</a>, we have the data showed to the right loaded into our program.</p>
+          </div>
+          <div class="col-lg-4">
+            NLP Statistics<br />
+            --------------<br />
+            Papers: 37000<br />
+            Corpus Words: 108163<br />
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 text-center">
+              <br />
+              <h3>Post Network Graph</h3>
+          </div>
+          <div class="col-lg-4 col-lg-offset-2 text-center">
+              <p>After finishing the steps explained in the <a href="#network">Network-chapter</a>, </p>
+          </div>
+          <div class="col-lg-4">
+              Data after processing<br />
+              ---------------------<br />
+              Number of nodes/papers : 4998<br />
+              Nomber of edges : 1537728<br /><br /><br />
+              Data after removing low-weighted edges<br />
+              --------------------------------------<br />
+              Number of nodes/papers : 4998<br />
+              Number of edges : 39828<br />
+          </div>
+        </div>
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 text-center">
+                <a href="http://nbviewer.jupyter.org/github/oikonang/arxase/blob/master/ArXiv%20Analysis.ipynb" class="btn btn-lg btn-outline-dark"><i class="fa fa-github-alt"></i> View Python Notebook on NBViewer</a>
+                <a href="https://www.youtube.com/watch?v=1MLhExvAwQw" class="btn btn-lg btn-outline-dark"><i class="fa fa-youtube"></i> View The Video That Inspired This Project</a>
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="col-sm-4 portfolio-item">
+                  <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                      <div class="caption">
+                          <div class="caption-content">
+                              <i class="fa fa-search-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img src="img/portfolio/cabin.png" class="img-responsive" alt="">
+                  </a>
+              </div>
+              <div class="col-sm-4 portfolio-item">
+                  <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                      <div class="caption">
+                          <div class="caption-content">
+                              <i class="fa fa-search-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img src="img/portfolio/cake.png" class="img-responsive" alt="">
+                  </a>
+              </div>
+              <div class="col-sm-4 portfolio-item">
+                  <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                      <div class="caption">
+                          <div class="caption-content">
+                              <i class="fa fa-search-plus fa-3x"></i>
+                          </div>
+                      </div>
+                      <img src="img/portfolio/circus.png" class="img-responsive" alt="">
+                  </a>
+              </div>
+          </div>
+
+          
+        </div>
+
+
     </section>
 
     <!-- About Section -->
