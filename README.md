@@ -1,27 +1,19 @@
-# [Start Bootstrap](http://startbootstrap.com/) - [Freelancer](http://startbootstrap.com/template-overviews/freelancer/)
+# ArXASE 
+### ArXiv.org Abstract Similarity Engine
 
-[Freelancer](http://startbootstrap.com/template-overviews/freelancer/) is a one page freelancer portfolio theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid with hover effects, full page portfolio item modals, and a working PHP contact form.
+## What is arXiv?
 
-## Getting Started
+The arXiv (pronounced *archive*) is a repository of electronic preprints, known as e-prints, of scientific papers in the field of **mathematics**, **physics**, **astronomy**, **computer science**, **quantitative biology**, **statistics**, and **quantitative finance**, which can be accessed online
 
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](http://startbootstrap.com/template-overviews/freelancer/)
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-freelancer.git`
-* Fork the repo
+## What we will do with it
+### Part 1
+In this project, we will extract prepints of the API of arXiv, collect the abstract of each article, clean the text (tokenize, lowercase, extract stopwords, lemmatize) and then extract the most important words with **TF-IDF**, and remove the rest. Then we will start building a network graph(directed), using the papers and the words of each paper as nodes. In order for the nodes to be distinguised between each other(nodes and words), we will assume that **paper-nodes** will always have *non-zero out-degrees* and **word-nodes** the opposite.
 
-## Bugs and Issues
+### Part 2
+This graph will then be the basis for a new undirected graph, where all word-nodes will turn into edges. Since we can't have multiple edges between the two same nodes, we will instead set the weight of the edge. The more common words, the higher the **weight**.
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-freelancer/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/freelancer/).
+### Part 3
+Furthermore we will also do **community detection** on the undirected graph, useful for finding papers in different, and potentially unexpected fields of study.
 
-## Creator
-
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
-
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
-
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
-
-## Copyright and License
-
-Copyright 2013-2016 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-freelancer/blob/gh-pages/LICENSE) license.
+### Part 4
+We will create a **wordcloud** per community and analyse the frequency of each field of study per community
