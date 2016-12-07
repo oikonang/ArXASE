@@ -146,7 +146,7 @@
                         The arXiv (pronounced archive, X being the greek letter &chi;/chi) is a repository of electronic preprints, known as e-prints, of scientific papers. The repository holds, as of December 2016, <span style="font-style: italic; text-decoration: underline; font-weight: bold;">1,211,916</span> e-prints in the fields of: mathematics, physics, astronomy, computer science, quantitative biology, statistics, and quantitative finance. The repository is created and managed by the Cornell University Library and is, unlike other scientific repositories, available online to every person without restrictions.
                 </p>
                 <p>
-                    The data used in this project can be found by visiting our project at github, or if you wish you can obtain you own data by visiting the ArXiv API <a href="http://export.arxiv.org/oai2?verb=ListRecords&set=math&from=2016-01-01&until=2016-12-01&metadataPrefix=arXiv" class="outgoing-dark">manually</a> or by using the same harvester as we did (described in the <a href="http://nbviewer.jupyter.org/github/oikonang/arxase/blob/master/ArXiv%20Analysis.ipynb" class="outgoing-dark">Notebook</a>)
+                    The data used in this project can be found by visiting our project at github (see <a href="#links" class="outgoing-dark">Links-section</a>), or if you wish you can obtain you own data by visiting the ArXiv API <a href="http://export.arxiv.org/oai2?verb=ListRecords&set=math&from=2016-01-01&until=2016-12-01&metadataPrefix=arXiv" class="outgoing-dark">manually</a> or by using the same harvester as we did (described in the <a href="http://nbviewer.jupyter.org/github/oikonang/arxase/blob/master/ArXiv%20Analysis.ipynb" class="outgoing-dark">Notebook</a>)
                 </p>
                 </div>
 
@@ -289,7 +289,10 @@
               <h3>Post Network Graph</h3>
           </div>
           <div class="col-lg-4 col-lg-offset-2 text-center">
-              <p>After finishing the steps explained in the <a href="#network">Network-section</a>, we end up with a very large network graph. There exists around one and a half million edges/links in the network, making it very heavy to work with.<br />As many of these relationship between papers are of a low significance (the weight) we decided to remove them do make future calculation more doable.</p>
+              <p>
+                  After finishing the steps explained in the <a href="#network">Network-section</a>, we end up with a very large network graph. There exists around one and a half million edges/links in the network, making it very heavy to work with.<br />
+                  As many of these relationship between papers are of a low significance (the weight) we decided to remove them do make future calculation more doable.
+              </p>
           </div>
           <div class="col-lg-4"><br />
               Data after processing<br />
@@ -301,13 +304,46 @@
               Number of nodes/papers : 4998<br />
               Number of edges : 39828<br />
           </div>
-        </div>
-
+      </div>
+      <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 text-center">
+              <br />
+              <hr />
+              <h3>Network Visualizations</h3>
+          </div>
+          <div class="col-lg-8 col-lg-offset-2 text-center">
+              <p>Below is the network graph visualization just after creating the network and filtering out the edges having weight less than three, because they not very significant.</p>
+          </div>
+          <div class="col-lg-12 text-center">
+              <img src="img/graphs/main.png" class="img-responsive" alt="" />
+          </div>
+          <div class="col-lg-8 col-lg-offset-2 text-center">
+              <p>As it is easily appear in the above image, there is a giant connected component, meaning that a lot papers are all tightly connected to each other. This is the center.</p>
+              <p>If we 'zoom in' at the center of the above graph, we get the visualization below.</p>
+          </div>
+          <div class="col-lg-12 text-center">
+              <img src="img/graphs/centralized.png" class="img-responsive" alt="" />
+          </div>
+          <div class="col-lg-8 col-lg-offset-2 text-center">
+              <p>After using the louvain algorithm on this giant component, we are able to detect and distinguish between the different communities.<br /> The communities in the graph are depicted by different colors below.</p>
+          </div>
+          <div class="col-lg-12 text-center">
+              <img src="img/graphs/community.png" class="img-responsive" alt="" />
+          </div>
+          <div class="col-lg-8 col-lg-offset-2 text-center">
+              <p>In the sampled data we managed to detect <b>12</b> communities out of <b>5000</b> papers.</p>
+          </div>
+      </div>
           <div class="row" id="community">
               <div class="col-lg-8 col-lg-offset-2 text-center">
                   <br />
                   <hr />
                   <h3>Community Word Clouds</h3>
+              </div>
+              <div class="col-lg-8 col-lg-offset-2 text-center">
+                  <p>Having detected different communities, we thought it might be interesting to see which words were the most common in each.</p>
+                  <p>Each community evolves around many different papers from many different sciences (except for the last two) which supports our initial idea about being able to find interesting papers in different fields of study.</p>
+                  <p>Below is only shown top 2 (or 1) fields of study, but the analysis notebook contains the full lists of studies and their respective amount of papers, for each community.</p>
               </div>
               <div class="col-sm-4 community-item text-center">
                   <h4>Community #1</h4>
@@ -483,6 +519,8 @@
                 <div class="col-lg-12 text-center">
                     <h2>Discussion</h2>
                     <hr class="star-light">
+                    <p>We are thrilled that we exceeded our expectations for the project. We managed not only to fulfill our base assumption of creating the network of scientific papers but also to analyze it further and make it a useful engine for a future product. An engine like the one netflix uses for suggesting top related movies to users based on their preferences, right before applying any Machine Learning algorithm.</p>
+                    <p>We created the fundamentals of an engine that is fed with new papers every 20 seconds, stores the data in a neat format, feeds the data into the graph, defines communities of papers based on betweeness-centrality and modularity thresholds, feeds the communities into a model that assigns the most related next paper to a user based on papers he has already read.</p>
                 </div>
             </div>
         </div>
@@ -498,7 +536,8 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                  <a href="http://nbviewer.jupyter.org/github/oikonang/arxase/blob/master/ArXiv%20Analysis.ipynb" class="btn btn-lg btn-outline-dark"><i class="fa fa-github-alt"></i> View Python Notebook on NBViewer</a>
+                  <a href="http://nbviewer.jupyter.org/github/oikonang/arxase/blob/master/ArXiv%20Analysis.ipynb" class="btn btn-lg btn-outline-dark"><i class="fa fa-github-alt"></i> View Python Notebook On NBViewer</a>
+                  <a href="https://github.com/oikonang/ArXASE/tree/master/data" class="btn btn-lg btn-outline-dark"><i class="fa fa-database"></i> View Or Download The Data We Used</a>
                   <a href="https://www.youtube.com/watch?v=1MLhExvAwQw" class="btn btn-lg btn-outline-dark"><i class="fa fa-youtube"></i> View The Video That Inspired This Project</a>
                 </div>
             </div>
