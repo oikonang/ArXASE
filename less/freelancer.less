@@ -160,6 +160,12 @@ header {
 					color: white;
 				}
 			}
+			a#nav-btn-about{
+				&:hover {
+					color: @theme-about;
+					outline: none;
+				}
+			}
 			&.active {
 				a {
 					color: white;
@@ -170,6 +176,9 @@ header {
 						color: white;
 						background: @theme-success;
 					}
+				}
+				a#nav-btn-about {
+					background: @theme-about;
 				}
 			}
 		}
@@ -381,6 +390,23 @@ footer {
 		color: @theme-success;
 		background: white;
 		border: solid 2px white;
+	}
+}
+
+.btn-outline-dark {
+	color: @theme-primary;
+	font-size: 20px;
+	border: solid 2px @theme-primary;
+	background: transparent;
+	transition: all 0.3s ease-in-out;
+	margin-top: 15px;
+	&:hover,
+	&:focus,
+	&:active,
+	&.active {
+		color: @theme-success;
+		background: @theme-primary;
+		border: solid 2px @theme-success;
 	}
 }
 

@@ -16,6 +16,13 @@
   margin-left: -40px;
   padding-left: 40px;
 }
+.outgoing-dark:link,
+.outgoing-dark:visited,
+.outgoing-dark:hover,
+.outgoing-dark:focus,
+.outgoing-dark:active {
+  color: #2C3E50;
+}
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow-x: hidden;
@@ -158,6 +165,10 @@ header .intro-text .skills {
 .navbar-custom .navbar-nav li a:active {
   color: white;
 }
+.navbar-custom .navbar-nav li a#nav-btn-about:hover {
+  color: #F4BE29;
+  outline: none;
+}
 .navbar-custom .navbar-nav li.active a {
   color: white;
   background: #FF5C5C;
@@ -167,6 +178,9 @@ header .intro-text .skills {
 .navbar-custom .navbar-nav li.active a:active {
   color: white;
   background: #FF5C5C;
+}
+.navbar-custom .navbar-nav li.active a#nav-btn-about {
+  background: #F4BE29;
 }
 .navbar-custom .navbar-toggle {
   color: white;
@@ -352,6 +366,22 @@ footer .footer-below {
   color: #FF5C5C;
   background: white;
   border: solid 2px white;
+}
+.btn-outline-dark {
+  color: #2C3E50;
+  font-size: 20px;
+  border: solid 2px #2C3E50;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+  margin-top: 15px;
+}
+.btn-outline-dark:hover,
+.btn-outline-dark:focus,
+.btn-outline-dark:active,
+.btn-outline-dark.active {
+  color: #FF5C5C;
+  background: #2C3E50;
+  border: solid 2px #FF5C5C;
 }
 .btn-primary {
   color: white;

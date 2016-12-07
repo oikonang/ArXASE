@@ -66,10 +66,7 @@
                         <a href="#analysis">Analysis</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#poc">PoC</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#about">About</a>
+                        <a href="#about" id="nav-btn-about">About</a>
                     </li>
                 </ul>
             </div>
@@ -142,7 +139,11 @@
                 <p>
                         The arXiv (pronounced archive, X being the greek letter &chi;/chi) is a repository of electronic preprints, known as e-prints, of scientific papers. The repository holds, as of December 2016, <span style="font-style: italic; text-decoration: underline; font-weight: bold;">1,211,916</span> e-prints in the fields of: mathematics, physics, astronomy, computer science, quantitative biology, statistics, and quantitative finance. The repository is created and managed by the Cornell University Library and is, unlike other scientific repositories, available online to every person without restrictions.
                 </p>
+                <p>
+                    The data used in this project can be found by visiting our project at github, or if you wish you can obtain you own data by visiting the ArXiv API <a href="http://export.arxiv.org/oai2?verb=ListRecords&set=math&from=2016-01-01&until=2016-12-01&metadataPrefix=arXiv" class="outgoing-dark">manually</a> or by using the same harvester as we did (described in the <a href="http://nbviewer.jupyter.org/github/oikonang/arxase/blob/master/ArXiv%20Analysis.ipynb" class="outgoing-dark">Notebook</a>)
+                </p>
                 </div>
+
             </div>
         </div>
     </section>
@@ -209,29 +210,13 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <a href="http://nbviewer.jupyter.org/github/oikonang/arxase/blob/master/ArXiv%20Analysis.ipynb" class="btn btn-lg btn-outline-dark"><i class="fa fa-github-alt"></i> View Python Notebook on NBViewer</a>
+                    <a href="https://www.youtube.com/watch?v=1MLhExvAwQw" class="btn btn-lg btn-outline-dark"><i class="fa fa-youtube"></i> View The Video That Inspired This Project</a>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="success" id="poc">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Proof of Concept</h2>
-                    <hr class="star-light">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-
-                </div>
-            </div>
-        </div>
-    </section>
-
 
     <!-- About Section -->
     <section class="about" id="about">
@@ -252,38 +237,45 @@
                 <div class="clearfix"></div>
 
                 <div class="col-lg-3 col-lg-offset-2 text-center">
-                    <h3>Angelos</h3>
-                    <a href="#" class="btn btn-sm btn-outline">
+                    <h3>Angelos Ikonomakis</h3>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <h3>Rasmus Lundsgaard Christiansen</h3>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <h3>Nikolaos Zafeiridis</h3>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-lg-3 col-lg-offset-2 text-center">
+                    <a href="https://github.com/oikonang" class="btn btn-sm btn-outline">
                         <i class="fa fa-github"></i>
                     </a>
-                    <a href="#" class="btn btn-sm btn-outline">
+                    <a href="https://linkedin.com/in/angelosikonomakis" class="btn btn-sm btn-outline">
                         <i class="fa fa-linkedin-square"></i>
                     </a>
-                    <a href="#" class="btn btn-sm btn-outline">
+                    <a href="mailto:angelos.ikonomakis@gmail.com" class="btn btn-sm btn-outline">
                         <i class="fa fa-envelope"></i>
                     </a>
                 </div>
                 <div class="col-lg-2 text-center">
-                    <h3>Nikolaos</h3>
-                    <a href="#" class="btn btn-sm btn-outline">
+                    <a href="https://github.com/rluch" class="btn btn-sm btn-outline">
                         <i class="fa fa-github"></i>
                     </a>
-                    <a href="#" class="btn btn-sm btn-outline">
+                    <a href="https://linkedin.com/in/rluch" class="btn btn-sm btn-outline">
                         <i class="fa fa-linkedin-square"></i>
                     </a>
-                    <a href="#" class="btn btn-sm btn-outline">
+                    <a href="mailto:r@backster.dk" class="btn btn-sm btn-outline">
                         <i class="fa fa-envelope"></i>
                     </a>
                 </div>
                 <div class="col-lg-3 text-center">
-                    <h3>Rasmus</h3>
-                    <a href="#" class="btn btn-sm btn-outline">
+                    <a href="https://github.com/nickzafi" class="btn btn-sm btn-outline">
                         <i class="fa fa-github"></i>
                     </a>
-                    <a href="#" class="btn btn-sm btn-outline">
+                    <a href="https://linkedin.com/in/nikolaos-zafeiridis-319686131" class="btn btn-sm btn-outline">
                         <i class="fa fa-linkedin-square"></i>
                     </a>
-                    <a href="#" class="btn btn-sm btn-outline">
+                    <a href="mailto:nickzafi@gmail.com" class="btn btn-sm btn-outline">
                         <i class="fa fa-envelope"></i>
                     </a>
                 </div>
@@ -322,8 +314,8 @@
                     <div class="footer-col col-md-4">
                         <!--h3>About Freelancer</h3>
                         <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p-->
-                        <div>Icons made by <a href="http://www.flaticon.com/authors/madebyoliver" title="Madebyoliver">Madebyoliver</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-                        <div>Bootstrap template: <a href="https://github.com/BlackrockDigital/startbootstrap-freelancer">Freelancer</a>.
+                        <!--div>Icons made by <a href="http://www.flaticon.com/authors/madebyoliver" title="Madebyoliver">Madebyoliver</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div-->
+                        <div>Based on <a href="https://startbootstrap.com/template-overviews/freelancer/">Freelancer</a> template.
                     </div>
                 </div>
             </div>
