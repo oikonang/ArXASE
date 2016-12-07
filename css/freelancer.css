@@ -16,6 +16,19 @@
   margin-left: -40px;
   padding-left: 40px;
 }
+.network-steplist {
+  /*border-radius: 15px;
+  padding-bottom: 10px;*/
+}
+.network-steplist li {
+  font-size: 25px;
+  border-bottom: 2px SOLID #eee;
+}
+.network-steplist li p {
+  background-color: white;
+  margin-left: -40px;
+  padding-left: 40px;
+}
 .outgoing-dark:link,
 .outgoing-dark:visited,
 .outgoing-dark:hover,
@@ -165,7 +178,7 @@ header .intro-text .skills {
 .navbar-custom .navbar-nav li a:active {
   color: white;
 }
-.navbar-custom .navbar-nav li a#nav-btn-about:hover {
+.navbar-custom .navbar-nav li a#nav-btn-authors:hover {
   color: #F4BE29;
   outline: none;
 }
@@ -179,7 +192,7 @@ header .intro-text .skills {
   color: white;
   background: #FF5C5C;
 }
-.navbar-custom .navbar-nav li.active a#nav-btn-about {
+.navbar-custom .navbar-nav li.active a#nav-btn-authors {
   background: #F4BE29;
 }
 .navbar-custom .navbar-toggle {
@@ -225,7 +238,7 @@ section.success {
   background: #FF5C5C;
   color: white;
 }
-section.about {
+section.authors {
   background: #F4BE29;
   color: white;
 }

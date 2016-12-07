@@ -72,7 +72,7 @@
                         <a href="#links">Links</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about" id="nav-btn-about">About</a>
+                        <a href="#authors" id="nav-btn-authors">Authors</a>
                     </li>
                 </ul>
             </div>
@@ -201,7 +201,26 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
+                    <p>
+                        The study of networks has emerged in diverse disciplines as a means of analyzing complex relational data.
+                    </p>
+                    <p>
+                        Graphs associated with networks can be either directed or undirected. Directed graph is a graph where the
+                        edges have a direction associated with them while in a undirected graph they don't.
+                    </p>
+                    <ol class="network-steplist">
+                        <li>Directed Graph</li>
+                        <p>
+                            Once the NLP processing was done, we started building a network graph (directed), using the papers and the words of each paper as nodes.<br />
+                            In order for the nodes to be distinguished between each other (nodes and words), we assumed that paper-nodes always had non-zero out-degrees and word-nodes the opposite.
+                        </p>
 
+                        <li>Undirected Graph</li>
+                        <p>This graph was the basis for a new undirected graph, where all word-nodes turned into edges. Since we couldn't have multiple edges between the two same nodes, we instead set the weight of the edge. The more words in common, the higher the weight.</p>
+
+                        <li>Community Detection and Analysis</li>
+                        <p>Furthermore we also conducted community detection on the undirected graph, which enabled us to find papers in different, and potentially unexpected fields of study.</p>
+                    </ol>
                 </div>
             </div>
         </div>
@@ -486,24 +505,16 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
+    <!-- Author Section -->
+    <section class="authors" id="authors">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>About</h2>
+                    <h2>Authors</h2>
                     <hr class="star-dark">
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
-                    <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
-                </div>
-                <div class="col-lg-4">
-                    <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
-                </div>
-                <div class="clearfix"></div>
-
                 <div class="col-lg-3 col-lg-offset-2 text-center">
                     <h3>Angelos Ikonomakis</h3>
                 </div>
@@ -559,6 +570,7 @@
                     <div class="footer-col col-md-4">
                     </div>
                     <div class="footer-col col-md-4">
+                        MADE AT<br /><br />
                         <a href="http://dtu.dk"><img src="img/dtu.png"/></a>
                         <!--h3>Around the Web</h3>
                         <ul class="list-inline">
@@ -583,7 +595,6 @@
                         <!--h3>About Freelancer</h3>
                         <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p-->
                         <!--div>Icons made by <a href="http://www.flaticon.com/authors/madebyoliver" title="Madebyoliver">Madebyoliver</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div-->
-                        <div>Based on <a href="https://startbootstrap.com/template-overviews/freelancer/">Freelancer</a> template.
                     </div>
                 </div>
             </div>
@@ -591,8 +602,13 @@
         <div class="footer-below">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-2">
+                    </div>
+                    <div class="col-lg-8">
                         Copyright &copy; ArXiv Abstract Similarity Engine 2016<br />
+                    </div>
+                    <div class="col-lg-2 text-right">
+                        <div>Based upon <a href="https://startbootstrap.com/template-overviews/freelancer/">Freelancer</a>.
                     </div>
                 </div>
             </div>
